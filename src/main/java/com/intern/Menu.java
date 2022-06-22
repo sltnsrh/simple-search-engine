@@ -22,8 +22,13 @@ public class Menu{
                 + "1. Find a person" + System.lineSeparator()
                 + "2. Print all people" + System.lineSeparator()
                 + "0. Exit");
-        int userChoice = Integer.parseInt(Input.menuInput.nextLine());
-        processMenu(userChoice);
+        String userChoice = Input.menuInput.nextLine();
+        if (userChoice.chars().allMatch(Character::isDigit)) {
+            processMenu(Integer.parseInt(userChoice));
+        } else {
+            System.out.println("Try to use corresponding digits for menu choice.");
+            startMenu();
+        }
     }
 
     private void processMenu(int userMenuChoice) {
