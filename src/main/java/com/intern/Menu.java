@@ -23,7 +23,7 @@ public class Menu{
                 + "2. Print all people" + System.lineSeparator()
                 + "0. Exit");
         String userChoice = Input.menuInput.nextLine();
-        if (userChoice.chars().allMatch(Character::isDigit)) {
+        if (userChoice.chars().allMatch(Character::isDigit) && !userChoice.isBlank()) {
             processMenu(Integer.parseInt(userChoice));
         } else {
             System.out.println("Try to use corresponding digits for menu choice.");
