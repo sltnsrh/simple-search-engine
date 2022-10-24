@@ -10,4 +10,5 @@ Simple search engine app uses indexed search from given sourse file.
 
 To use the app:
   - run Main class with two arguments to use data from existing file in the resources folder: --data users.txt
-  - input commands are case insensitive
+  - follow menu tips
+  - input commands are case-insensitive

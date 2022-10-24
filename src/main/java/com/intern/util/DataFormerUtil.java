@@ -42,4 +42,12 @@ public final class DataFormerUtil {
         }
         return indexMap;
     }
+
+    public static String getFileName(String typeFromArgs, String nameFromArgs) {
+        if (typeFromArgs.equals("--data")) {
+            return nameFromArgs;
+        } else {
+            throw new RuntimeException("Incorrect input arguments to recognise data file.");
+        }
+    }
 }
