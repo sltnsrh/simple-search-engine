@@ -12,13 +12,13 @@ public final class DataProcessUtil {
     public static void startSearch(Map<String, HashSet<Integer>> indexMap, List<String> listOfPeople) {
         System.out.println("Select a matching strategy (ALL, ANY, NONE):");
         String matchingStrategy = Input.menuInput.nextLine().toUpperCase().trim();
-        while (!Strategy.searchStrategyStore.containsKey(matchingStrategy)) {
+        while (!StrategyStore.searchStrategyStore.containsKey(matchingStrategy)) {
             System.out.println("Please, select a correct matching strategy:");
             matchingStrategy = Input.menuInput.nextLine().toUpperCase().trim();
         }
         System.out.println("Enter a name or email to search all suitable people:");
         String searchRequest = Input.menuInput.nextLine().toLowerCase().trim();
-        Set<String> searchResult = Strategy.searchStrategyStore.get(matchingStrategy)
+        Set<String> searchResult = StrategyStore.searchStrategyStore.get(matchingStrategy)
                 .executeSearch(indexMap, listOfPeople, searchRequest);
         outResult(searchResult);
     }

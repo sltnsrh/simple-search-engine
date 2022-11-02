@@ -1,4 +1,4 @@
-package com.intern;
+package com.intern.menu;
 
 import static com.intern.util.DataProcessUtil.printAllPeople;
 import static com.intern.util.DataProcessUtil.startSearch;
@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
-public class Menu{
+public class Menu {
     private final Map<String, HashSet<Integer>> indexMap;
     private final List<String> listOfPeople;
 
