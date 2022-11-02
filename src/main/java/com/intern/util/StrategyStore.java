@@ -8,7 +8,7 @@ import com.intern.strategy.Searchable;
 import java.util.HashMap;
 import java.util.Map;
 
-public final class Strategy {
+public final class StrategyStore {
     public static final Map<String, Searchable> searchStrategyStore = new HashMap<>();
 
     static {
@@ -17,6 +17,6 @@ public final class Strategy {
         searchStrategyStore.put("NONE", new NoneSearch());
     }
 
-    private Strategy(){
+    private StrategyStore() {
     }
 }
